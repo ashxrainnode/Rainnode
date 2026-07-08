@@ -2,13 +2,18 @@
   "planTypes": [
     {
       "id": "budget",
-      "name": "Budget Ryzen",
+      "name": "AMD Epyc",
       "image": "/cpu/ryzen7.png"
     },
     {
       "id": "premium",
       "name": "Premium Ryzen 9",
       "image": "/cpu/ryzen9.png"
+    },
+    {
+      "id": "intel-xeon",
+      "name": "Intel Xeon",
+      "image": "/cpu/intel.png"
     }
   ],
   "locations": [
@@ -16,13 +21,30 @@
       "id": "germany",
       "name": "Germany",
       "flag": "/flags/germany.png",
-      "availablePlanTypes": ["budget"]
+      "availablePlanTypes": [
+        "budget",
+        "intel-xeon"
+      ]
     },
     {
       "id": "singapore",
       "name": "Singapore",
       "flag": "/flags/singapore.png",
-      "availablePlanTypes": ["budget", "premium"]
+      "availablePlanTypes": [
+        "budget",
+        "premium",
+        "intel-xeon"
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "flag": "/flags/india.png",
+      "availablePlanTypes": [
+        "budget",
+        "premium",
+        "intel-xeon"
+      ]
     }
   ],
   "games": [
@@ -33,49 +55,74 @@
       "icon": "/icons/minecraft-icon.webp",
       "banner": "/banners/minecraft-banners.webp",
       "featured": true,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹89/mo",
       "primaryColor": "#4CAF50",
       "plans": {
         "budget": [
           {
-            "id": "minecraft-budget-1",
-            "name": "Minecraft 4GB",
+            "id": "minecraft-dirt",
+            "name": "Dirt Plan",
+            "type": "budget",
+            "ram": "2 GB",
+            "cpu": "100%",
+            "storage": "20 GB SSD",
+            "price": 89,
+            "orderLink": "https://order.example.com/minecraft-dirt",
+            "backup": "1x",
+            "ports": "1x",
+            "databases": "1x"
+          },
+          {
+            "id": "minecraft-stone",
+            "name": "Stone Plan",
             "type": "budget",
             "ram": "4 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 4.0,
-            "orderLink": "https://order.example.com/minecraft-4gb"
+            "cpu": "200%",
+            "storage": "20 GB SSD",
+            "price": 169,
+            "orderLink": "https://order.example.com/minecraft-stone",
+            "backup": "2x",
+            "ports": "2x",
+            "databases": "2x"
           },
           {
-            "id": "minecraft-budget-2",
-            "name": "Minecraft 8GB",
+            "id": "minecraft-granite",
+            "name": "Granite Plan",
             "type": "budget",
             "ram": "8 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 8.0,
-            "orderLink": "https://order.example.com/minecraft-8gb"
+            "cpu": "400%",
+            "storage": "40 GB SSD",
+            "price": 329,
+            "orderLink": "https://order.example.com/minecraft-granite",
+            "backup": "4x",
+            "ports": "4x",
+            "databases": "4x"
           },
           {
-            "id": "minecraft-budget-3",
-            "name": "Minecraft 16GB",
+            "id": "minecraft-diorite",
+            "name": "Diorite Plan",
             "type": "budget",
             "ram": "16 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 16.0,
-            "orderLink": "https://order.example.com/minecraft-16gb"
+            "cpu": "800%",
+            "storage": "80 GB SSD",
+            "price": 629,
+            "orderLink": "https://order.example.com/minecraft-diorite",
+            "backup": "8x",
+            "ports": "8x",
+            "databases": "8x"
           },
           {
-            "id": "minecraft-budget-4",
-            "name": "Minecraft 32GB",
+            "id": "minecraft-deepslate",
+            "name": "Deepslate Plan",
             "type": "budget",
             "ram": "32 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 32.0,
-            "orderLink": "https://order.example.com/minecraft-32gb"
+            "cpu": "1600%",
+            "storage": "160 GB SSD",
+            "price": 1199,
+            "orderLink": "https://order.example.com/minecraft-deepslate",
+            "backup": "16x",
+            "ports": "16x",
+            "databases": "16x"
           }
         ],
         "premium": [
@@ -86,7 +133,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/minecraft-premium-4gb"
           },
           {
@@ -96,7 +143,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/minecraft-premium-8gb"
           },
           {
@@ -106,7 +153,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/minecraft-premium-16gb"
           },
           {
@@ -116,8 +163,50 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/minecraft-premium-32gb"
+          }
+        ],
+        "intel-xeon": [
+          {
+            "id": "minecraft-xeon-1",
+            "name": "Minecraft 4GB",
+            "type": "intel-xeon",
+            "ram": "4 GB",
+            "cpu": "Unmetered",
+            "storage": "Unmetered SSD",
+            "price": 570,
+            "orderLink": "https://order.example.com/minecraft-xeon-4gb"
+          },
+          {
+            "id": "minecraft-xeon-2",
+            "name": "Minecraft 8GB",
+            "type": "intel-xeon",
+            "ram": "8 GB",
+            "cpu": "Unmetered",
+            "storage": "Unmetered SSD",
+            "price": 1140,
+            "orderLink": "https://order.example.com/minecraft-xeon-8gb"
+          },
+          {
+            "id": "minecraft-xeon-3",
+            "name": "Minecraft 16GB",
+            "type": "intel-xeon",
+            "ram": "16 GB",
+            "cpu": "Unmetered",
+            "storage": "Unmetered SSD",
+            "price": 2280,
+            "orderLink": "https://order.example.com/minecraft-xeon-16gb"
+          },
+          {
+            "id": "minecraft-xeon-4",
+            "name": "Minecraft 32GB",
+            "type": "intel-xeon",
+            "ram": "32 GB",
+            "cpu": "Unmetered",
+            "storage": "Unmetered SSD",
+            "price": 4560,
+            "orderLink": "https://order.example.com/minecraft-xeon-32gb"
           }
         ]
       }
@@ -129,7 +218,7 @@
       "icon": "/icons/gmod-icon.webp",
       "banner": "/banners/gmod-banner.webp",
       "featured": false,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹380/mo",
       "primaryColor": "#FF6B35",
       "plans": {
         "budget": [
@@ -140,7 +229,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 4.0,
+            "price": 380,
             "orderLink": "https://order.example.com/gmod-4gb"
           },
           {
@@ -150,7 +239,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 8.0,
+            "price": 760,
             "orderLink": "https://order.example.com/gmod-8gb"
           },
           {
@@ -160,7 +249,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 16.0,
+            "price": 1520,
             "orderLink": "https://order.example.com/gmod-16gb"
           },
           {
@@ -170,7 +259,7 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 32.0,
+            "price": 3040,
             "orderLink": "https://order.example.com/gmod-32gb"
           }
         ],
@@ -182,7 +271,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/gmod-premium-4gb"
           },
           {
@@ -192,7 +281,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/gmod-premium-8gb"
           },
           {
@@ -202,7 +291,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/gmod-premium-16gb"
           },
           {
@@ -212,10 +301,11 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/gmod-premium-32gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     },
     {
@@ -225,7 +315,7 @@
       "icon": "/icons/cs2-icon.webp",
       "banner": "/banners/cs2-banner.webp",
       "featured": true,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹380/mo",
       "primaryColor": "#F39C12",
       "plans": {
         "budget": [
@@ -236,7 +326,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 4.0,
+            "price": 380,
             "orderLink": "https://order.example.com/csgo-4gb"
           },
           {
@@ -246,7 +336,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 8.0,
+            "price": 760,
             "orderLink": "https://order.example.com/csgo-8gb"
           },
           {
@@ -256,7 +346,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 16.0,
+            "price": 1520,
             "orderLink": "https://order.example.com/csgo-16gb"
           },
           {
@@ -266,7 +356,7 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 32.0,
+            "price": 3040,
             "orderLink": "https://order.example.com/csgo-32gb"
           }
         ],
@@ -278,7 +368,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/csgo-premium-4gb"
           },
           {
@@ -288,7 +378,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/csgo-premium-8gb"
           },
           {
@@ -298,7 +388,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/csgo-premium-16gb"
           },
           {
@@ -308,10 +398,11 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/csgo-premium-32gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     },
     {
@@ -321,7 +412,7 @@
       "icon": "/icons/rust-icon.webp",
       "banner": "/banners/rust-banner-2.webp",
       "featured": false,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹380/mo",
       "primaryColor": "#CE422B",
       "plans": {
         "budget": [
@@ -332,7 +423,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 4.0,
+            "price": 380,
             "orderLink": "https://order.example.com/rust-4gb"
           },
           {
@@ -342,7 +433,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 8.0,
+            "price": 760,
             "orderLink": "https://order.example.com/rust-8gb"
           },
           {
@@ -352,7 +443,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 16.0,
+            "price": 1520,
             "orderLink": "https://order.example.com/rust-16gb"
           },
           {
@@ -362,7 +453,7 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 32.0,
+            "price": 3040,
             "orderLink": "https://order.example.com/rust-32gb"
           }
         ],
@@ -374,7 +465,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/rust-premium-4gb"
           },
           {
@@ -384,7 +475,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/rust-premium-8gb"
           },
           {
@@ -394,7 +485,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/rust-premium-16gb"
           },
           {
@@ -404,10 +495,11 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/rust-premium-32gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     },
     {
@@ -417,7 +509,7 @@
       "icon": "/icons/ark-icon.webp",
       "banner": "/banners/ark-banners.webp",
       "featured": false,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹380/mo",
       "primaryColor": "#8B4513",
       "plans": {
         "budget": [
@@ -428,7 +520,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 4.0,
+            "price": 380,
             "orderLink": "https://order.example.com/ark-4gb"
           },
           {
@@ -438,7 +530,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 8.0,
+            "price": 760,
             "orderLink": "https://order.example.com/ark-8gb"
           },
           {
@@ -448,7 +540,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 16.0,
+            "price": 1520,
             "orderLink": "https://order.example.com/ark-16gb"
           },
           {
@@ -458,7 +550,7 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 32.0,
+            "price": 3040,
             "orderLink": "https://order.example.com/ark-32gb"
           }
         ],
@@ -470,7 +562,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/ark-premium-4gb"
           },
           {
@@ -480,7 +572,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/ark-premium-8gb"
           },
           {
@@ -490,7 +582,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/ark-premium-16gb"
           },
           {
@@ -500,10 +592,11 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/ark-premium-32gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     },
     {
@@ -513,7 +606,7 @@
       "icon": "/icons/valheim-icon.webp",
       "banner": "/banners/valheim-banner.webp",
       "featured": true,
-      "startingAt": "$4.00/mo",
+      "startingAt": "₹380/mo",
       "primaryColor": "#4A90E2",
       "plans": {
         "budget": [
@@ -524,7 +617,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 4.0,
+            "price": 380,
             "orderLink": "https://order.example.com/valheim-4gb"
           },
           {
@@ -534,7 +627,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 8.0,
+            "price": 760,
             "orderLink": "https://order.example.com/valheim-8gb"
           },
           {
@@ -544,7 +637,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 16.0,
+            "price": 1520,
             "orderLink": "https://order.example.com/valheim-16gb"
           },
           {
@@ -554,7 +647,7 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 32.0,
+            "price": 3040,
             "orderLink": "https://order.example.com/valheim-32gb"
           }
         ],
@@ -566,7 +659,7 @@
             "ram": "4 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 5.0,
+            "price": 475,
             "orderLink": "https://order.example.com/valheim-premium-4gb"
           },
           {
@@ -576,7 +669,7 @@
             "ram": "8 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 10.0,
+            "price": 950,
             "orderLink": "https://order.example.com/valheim-premium-8gb"
           },
           {
@@ -586,7 +679,7 @@
             "ram": "16 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 20.0,
+            "price": 1900,
             "orderLink": "https://order.example.com/valheim-premium-16gb"
           },
           {
@@ -596,10 +689,11 @@
             "ram": "32 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 40.0,
+            "price": 3800,
             "orderLink": "https://order.example.com/valheim-premium-32gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     },
     {
@@ -609,7 +703,7 @@
       "icon": "/icons/nodejs.png",
       "banner": "/banners/node.webp",
       "featured": true,
-      "startingAt": "$0.90/mo",
+      "startingAt": "₹86/mo",
       "primaryColor": "#339933",
       "plans": {
         "budget": [
@@ -620,7 +714,7 @@
             "ram": "1 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 0.9,
+            "price": 86,
             "orderLink": "https://order.example.com/discord-1gb"
           },
           {
@@ -630,7 +724,7 @@
             "ram": "2 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 1.8,
+            "price": 171,
             "orderLink": "https://order.example.com/discord-2gb"
           },
           {
@@ -640,7 +734,7 @@
             "ram": "3 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 2.7,
+            "price": 256,
             "orderLink": "https://order.example.com/discord-3gb"
           }
         ],
@@ -652,7 +746,7 @@
             "ram": "1 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 1.1,
+            "price": 105,
             "orderLink": "https://order.example.com/discord-premium-1gb"
           },
           {
@@ -662,7 +756,7 @@
             "ram": "2 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 2.2,
+            "price": 209,
             "orderLink": "https://order.example.com/discord-premium-2gb"
           },
           {
@@ -672,10 +766,11 @@
             "ram": "3 GB",
             "cpu": "Unmetered",
             "storage": "Unmetered SSD",
-            "price": 3.3,
+            "price": 314,
             "orderLink": "https://order.example.com/discord-premium-3gb"
           }
-        ]
+        ],
+        "intel-xeon": []
       }
     }
   ]

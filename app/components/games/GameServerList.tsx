@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Image from "next/image"
-import { Server, Shield, Cpu, HardDrive, MemoryStick } from "lucide-react"
+import { Server, Shield, Cpu, HardDrive, MemoryStick, DatabaseBackup, Network, Database } from "lucide-react"
 import gamesConfig from "../../config/sections/games.json"
 import type { GamesConfig, Game, GamePlan, GameLocation } from "../../types/games"
 import { CurrencySelector, useCurrency } from "../ui/CurrencySelector"
@@ -22,12 +22,12 @@ export default function GameServerList() {
   const { t } = useLanguage()
   const [selectedGame, setSelectedGame] = useState<string>(config.games[0]?.id || "")
   const [selectedLocation, setSelectedLocation] = useState<string>(config.locations[0]?.id || "")
-  const [selectedPlanType, setSelectedPlanType] = useState<"budget" | "premium">("budget")
+  const [selectedPlanType, setSelectedPlanType] = useState<string>(config.planTypes[0]?.id || "budget")
 
   useEffect(() => {
     const game = searchParams.get("game")
     const location = searchParams.get("location")
-    const plan = searchParams.get("plan") as "budget" | "premium"
+    const plan = searchParams.get("plan")
 
     if (game && config.games.some((g: Game) => g.id === game)) {
       setSelectedGame(game)
@@ -35,7 +35,7 @@ export default function GameServerList() {
     if (location && config.locations.some((l) => l.id === location)) {
       setSelectedLocation(location)
     }
-    if (plan && ["budget", "premium"].includes(plan)) {
+    if (plan && config.planTypes.some((pt) => pt.id === plan)) {
       setSelectedPlanType(plan)
     }
   }, [searchParams])
@@ -56,7 +56,7 @@ export default function GameServerList() {
   const currentLocation = config.locations.find((loc) => loc.id === selectedLocation)
   const availablePlanTypes = currentLocation?.availablePlanTypes || []
 
-  const handlePlanTypeSelection = (planType: "budget" | "premium") => {
+  const handlePlanTypeSelection = (planType: string) => {
     setSelectedPlanType(planType)
     const currentLoc = config.locations.find((loc) => loc.id === selectedLocation)
     if (currentLoc && !currentLoc.availablePlanTypes.includes(planType)) {
@@ -72,7 +72,7 @@ export default function GameServerList() {
     const newLocation = config.locations.find((loc) => loc.id === locationId)
     if (newLocation && !newLocation.availablePlanTypes.includes(selectedPlanType)) {
       if (newLocation.availablePlanTypes.length > 0) {
-        setSelectedPlanType(newLocation.availablePlanTypes[0] as "budget" | "premium")
+        setSelectedPlanType(newLocation.availablePlanTypes[0])
       }
     }
   }
@@ -154,7 +154,7 @@ export default function GameServerList() {
                   return (
                     <button
                       key={type.id}
-                      onClick={() => handlePlanTypeSelection(type.id as "budget" | "premium")}
+                      onClick={() => handlePlanTypeSelection(type.id)}
                       disabled={!isAvailable}
                       className={`flex items-center gap-3 px-6 py-2  rounded-tl-xl rounded-br-xl font-medium transition-all duration-300 backdrop-blur-sm ${isSelected
                           ? "bg-[var(--game-color)]/10 border border-[var(--game-color)]/30 text-[var(--game-color)] shadow-lg backdrop-blur-sm"
@@ -274,7 +274,7 @@ export default function GameServerList() {
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">{t('gameServerList.step4')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-          {currentGame?.plans[selectedPlanType].map((plan: GamePlan, index: number) => (
+          {(currentGame?.plans[selectedPlanType] || []).map((plan: GamePlan, index: number) => (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
@@ -322,6 +322,24 @@ export default function GameServerList() {
                     <Shield className="w-5 h-5 text-[var(--game-color)]" />
                     <span className="text-gray-600 dark:text-gray-300">{t('gameServerList.ddosProtection')}</span>
                   </div>
+                  {plan.backup && (
+                    <div className="flex items-center gap-3">
+                      <DatabaseBackup className="w-5 h-5 text-[var(--game-color)]" />
+                      <span className="text-gray-600 dark:text-gray-300">{plan.backup} Backups</span>
+                    </div>
+                  )}
+                  {plan.ports && (
+                    <div className="flex items-center gap-3">
+                      <Network className="w-5 h-5 text-[var(--game-color)]" />
+                      <span className="text-gray-600 dark:text-gray-300">{plan.ports} Ports</span>
+                    </div>
+                  )}
+                  {plan.databases && (
+                    <div className="flex items-center gap-3">
+                      <Database className="w-5 h-5 text-[var(--game-color)]" />
+                      <span className="text-gray-600 dark:text-gray-300">{plan.databases} Databases</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-baseline gap-1 mb-6">

@@ -1,10 +1,13 @@
 export interface GamePlan {
   id: string
   name: string
-  type: "budget" | "premium"
+  type: string
   ram: string
   cpu: string
   storage: string
+  backup?: string
+  ports?: string
+  databases?: string
   price: number
   orderLink: string
 }
@@ -19,8 +22,7 @@ export interface Game {
   startingAt: string
   primaryColor: string
   plans: {
-    budget: GamePlan[]
-    premium: GamePlan[]
+    [key: string]: GamePlan[]
   }
 }
 

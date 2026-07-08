@@ -28,7 +28,7 @@
         "bandwidth": "100 GB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£2.99",
+        "price": "₹284",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/shared/starter"
       },
@@ -44,7 +44,7 @@
         "bandwidth": "250 GB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£4.99",
+        "price": "₹474",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/shared/basic"
       },
@@ -60,7 +60,7 @@
         "bandwidth": "500 GB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£7.99",
+        "price": "₹759",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/shared/standard"
       }
@@ -79,7 +79,7 @@
         "bandwidth": "1 TB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£14.99",
+        "price": "₹1424",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/business/pro"
       },
@@ -95,7 +95,7 @@
         "bandwidth": "2 TB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£24.99",
+        "price": "₹2374",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/business/advanced"
       },
@@ -112,7 +112,7 @@
         "bandwidth": "5 TB",
         "bandwidthDetail": "Monthly Transfer",
         "uptime": "99.9% Uptime",
-        "price": "£49.99",
+        "price": "₹4749",
         "period": "/mo",
         "orderLink": "https://example.com/order/webhosting/business/enterprise"
       }

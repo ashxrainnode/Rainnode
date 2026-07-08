@@ -11,6 +11,12 @@
       "name": "AMD Ryzen 9",
       "displayName": "AMD Ryzen 9",
       "image": "/cpu/ryzen9.png"
+    },
+    {
+      "id": "intel-xeon",
+      "name": "Intel Xeon",
+      "displayName": "Intel Xeon",
+      "image": "/cpu/intel.png"
     }
   ],
   "locations": [
@@ -19,21 +25,41 @@
       "name": "United States",
       "flag": "/flags/usa.png",
       "displayName": "USA",
-      "availableCpus": ["ryzen-7"]
+      "availableCpus": [
+        "ryzen-7",
+        "intel-xeon"
+      ]
     },
     {
       "id": "germany",
       "name": "Germany",
       "flag": "/flags/germany.png",
       "displayName": "Germany",
-      "availableCpus": ["ryzen-7"]
+      "availableCpus": [
+        "ryzen-7",
+        "intel-xeon"
+      ]
     },
     {
       "id": "singapore",
       "name": "Singapore",
       "flag": "/flags/singapore.png",
       "displayName": "Singapore",
-      "availableCpus": ["ryzen-9"]
+      "availableCpus": [
+        "ryzen-9",
+        "intel-xeon"
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "flag": "/flags/india.png",
+      "displayName": "India",
+      "availableCpus": [
+        "ryzen-7",
+        "ryzen-9",
+        "intel-xeon"
+      ]
     }
   ],
   "plans": {
@@ -49,7 +75,7 @@
         "ramDetail": "DDR5 RAM",
         "storage": "25 GB",
         "storageDetail": "NVMe SSD",
-        "price": "$2.70",
+        "price": "₹256",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS1"
       },
@@ -66,7 +92,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$5.20",
+        "price": "₹494",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS2"
       },
@@ -83,7 +109,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "2 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$10.60",
+        "price": "₹1007",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS3"
       },
@@ -100,7 +126,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "3 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$15.60",
+        "price": "₹1482",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS4"
       },
@@ -117,7 +143,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "5 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$20.60",
+        "price": "₹1957",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS5"
       },
@@ -134,7 +160,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "10 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$40.60",
+        "price": "₹3857",
         "period": "/mo",
         "orderLink": "/order/vps/BVPS6"
       }
@@ -151,7 +177,7 @@
         "ramDetail": "DDR5 RAM",
         "storage": "25 GB",
         "storageDetail": "NVMe SSD",
-        "price": "$3.90",
+        "price": "₹370",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS1"
       },
@@ -168,7 +194,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "1.5 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$7.40",
+        "price": "₹703",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS2"
       },
@@ -185,7 +211,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "3 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$14.90",
+        "price": "₹1416",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS3"
       },
@@ -202,7 +228,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "5 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$22.40",
+        "price": "₹2128",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS4"
       },
@@ -219,7 +245,7 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "8 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$29.90",
+        "price": "₹2840",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS5"
       },
@@ -236,9 +262,111 @@
         "storageDetail": "NVMe SSD",
         "bandwidth": "15 TB",
         "bandwidthDetail": "Bandwidth",
-        "price": "$58.90",
+        "price": "₹5596",
         "period": "/mo",
         "orderLink": "/order/vps/PVPS6"
+      }
+    ],
+    "intel-xeon": [
+      {
+        "id": "XVPS1",
+        "name": "XVPS1",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "1 Core",
+        "cpuDetail": "Cores",
+        "ram": "2 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "25 GB",
+        "storageDetail": "NVMe SSD",
+        "price": "₹426",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS1"
+      },
+      {
+        "id": "XVPS2",
+        "name": "XVPS2",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "1 Core",
+        "cpuDetail": "Cores",
+        "ram": "4 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "50 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "1.5 TB",
+        "bandwidthDetail": "Bandwidth",
+        "price": "₹808",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS2"
+      },
+      {
+        "id": "XVPS3",
+        "name": "XVPS3",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "2 Cores",
+        "cpuDetail": "Cores",
+        "ram": "8 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "100 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "3 TB",
+        "bandwidthDetail": "Bandwidth",
+        "price": "₹1628",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS3"
+      },
+      {
+        "id": "XVPS4",
+        "name": "XVPS4",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "3 Cores",
+        "cpuDetail": "Cores",
+        "ram": "12 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "150 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "5 TB",
+        "bandwidthDetail": "Bandwidth",
+        "price": "₹2447",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS4"
+      },
+      {
+        "id": "XVPS5",
+        "name": "XVPS5",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "4 Cores",
+        "cpuDetail": "Cores",
+        "ram": "16 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "200 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "8 TB",
+        "bandwidthDetail": "Bandwidth",
+        "price": "₹3266",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS5"
+      },
+      {
+        "id": "XVPS6",
+        "name": "XVPS6",
+        "badge": "ECC",
+        "image": "/cpu/intel.png",
+        "cpu": "6 Cores",
+        "cpuDetail": "Cores",
+        "ram": "32 GB",
+        "ramDetail": "DDR5 ECC RAM",
+        "storage": "256 GB",
+        "storageDetail": "NVMe SSD",
+        "bandwidth": "15 TB",
+        "bandwidthDetail": "Bandwidth",
+        "price": "₹6435",
+        "period": "/mo",
+        "orderLink": "/order/vps/XVPS6"
       }
     ]
   }
