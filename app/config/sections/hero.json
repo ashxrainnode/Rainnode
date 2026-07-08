@@ -1,8 +1,8 @@
 {
   "navbar": {
-    "logo": "/banners/Dezer-Banner.webp",
-    "brandName": "Dezer",
-    "brandAccent": "Host"
+    "logo": "/banners/RainNode-Banner.webp",
+    "brandName": "Rain",
+    "brandAccent": "Node"
   },
   "hero": {
     "title": {
@@ -102,8 +102,8 @@
         "loading": "lazy"
       },
       {
-        "name": "DezerX",
-        "src": "/banners/Dezer-Banner.webp",
+        "name": "RainNode",
+        "src": "/banners/RainNode-Banner.webp",
         "loading": "lazy"
       }
     ]

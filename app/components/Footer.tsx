@@ -24,9 +24,9 @@ export default function Footer() {
   ]
 
   const contactInfo = [
-    { icon: Mail, label: t('footer.email'), value: "support@dezerx.com", href: "mailto:support@dezerx.com" },
+    { icon: Mail, label: t('footer.email'), value: "support@rainnode.com", href: "mailto:support@rainnode.com" },
     { icon: Phone, label: t('footer.phone'), value: "N/A", href: "tel:+15551234567" },
-    { icon: Gamepad2, label: t('footer.gamePanel'), value: "panel.dezerx.com", href: "https://panel.dezerx.com" },
+    { icon: Gamepad2, label: t('footer.gamePanel'), value: "panel.rainnode.com", href: "https://panel.rainnode.com" },
   ]
 
   return (
@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="mb-6">
                 <Image
                   src="/meta/Logo.png"
-                  alt="Dezer Logo"
+                  alt="RainNode Logo"
                   width={200}
                   height={60}
                   className="h-12 w-auto"
@@ -142,11 +142,9 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10"
           >
-            {/* HEY HEY HEY, WE CAN TALK ABOUT THIS PLEASE. DONT REMOVE IT, PLSSSS. think about it..  */}
-            {/* Look, remove the DezerNova add ur own hosting, but go above and change ur name to MY NAME AGAIN. come onn man, it would look like i worked for you. come on buddy, i know u want to keep it.  */}
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
-                © {new Date().getFullYear()} DezerNova. All rights reserved.
+                © {new Date().getFullYear()} RainNode. All rights reserved.
               </div>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
