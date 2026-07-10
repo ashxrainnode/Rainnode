@@ -262,5 +262,12 @@
       "title": "設定Cookie",
       "description": "より良いユーザー体験のために、言語とテーマの設定を記憶します。"
     }
+  },
+  "domainPricing": {
+    "badge": "Domain Registration",
+    "title": "Register Your Domain",
+    "description": "Secure your brand with affordable domains, backed by Cloudflare DNS.",
+    "domain": "Domain Name",
+    "registerNow": "Register Now"
   }
 }

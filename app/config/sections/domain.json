@@ -1,0 +1,17 @@
+{
+  "plans": [
+    { "id": "fun", "tld": ".fun", "price": 249, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "in", "tld": ".in", "price": 699, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "com", "tld": ".com", "price": 1299, "period": "/year", "badge": "Most Popular", "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "xyz", "tld": ".xyz", "price": 249, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "net", "tld": ".net", "price": 1999, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "org", "tld": ".org", "price": 1299, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "site", "tld": ".site", "price": 249, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "online", "tld": ".online", "price": 249, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "store", "tld": ".store", "price": 249, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "tech", "tld": ".tech", "price": 999, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "space", "tld": ".space", "price": 299, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "cloud", "tld": ".cloud", "price": 699, "period": "/year", "badge": null, "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" },
+    { "id": "shop", "tld": ".shop", "price": 249, "period": "/year", "badge": "Best Value", "orderLink": "https://discord.com/channels/1413944368947003454/1422548801888976966" }
+  ]
+}

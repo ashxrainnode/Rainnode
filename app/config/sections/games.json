@@ -2,28 +2,27 @@
   "planTypes": [
     {
       "id": "budget",
+      "name": "Intel Xeon",
+      "image": "/cpu/intel.png"
+    },
+    {
+      "id": "premium",
       "name": "AMD Epyc",
       "image": "/cpu/ryzen7.png"
     },
     {
-      "id": "premium",
-      "name": "Premium Ryzen 9",
-      "image": "/cpu/ryzen9.png"
-    },
-    {
       "id": "intel-xeon",
-      "name": "Intel Xeon",
-      "image": "/cpu/intel.png"
+      "name": "Ryzen 9",
+      "image": "/cpu/ryzen9.png"
     }
   ],
   "locations": [
     {
-      "id": "germany",
-      "name": "Germany",
-      "flag": "/flags/germany.png",
+      "id": "india",
+      "name": "India",
+      "flag": "/flags/india.png",
       "availablePlanTypes": [
-        "budget",
-        "intel-xeon"
+        "premium"
       ]
     },
     {
@@ -31,19 +30,16 @@
       "name": "Singapore",
       "flag": "/flags/singapore.png",
       "availablePlanTypes": [
-        "budget",
         "premium",
         "intel-xeon"
       ]
     },
     {
-      "id": "india",
-      "name": "India",
-      "flag": "/flags/india.png",
+      "id": "germany",
+      "name": "Germany",
+      "flag": "/flags/germany.png",
       "availablePlanTypes": [
-        "budget",
-        "premium",
-        "intel-xeon"
+        "budget"
       ]
     }
   ],
@@ -66,7 +62,7 @@
             "ram": "2 GB",
             "cpu": "100%",
             "storage": "20 GB SSD",
-            "price": 89,
+            "price": 199,
             "orderLink": "https://order.example.com/minecraft-dirt",
             "backup": "1x",
             "ports": "1x",
@@ -79,7 +75,7 @@
             "ram": "4 GB",
             "cpu": "200%",
             "storage": "20 GB SSD",
-            "price": 169,
+            "price": 399,
             "orderLink": "https://order.example.com/minecraft-stone",
             "backup": "2x",
             "ports": "2x",
@@ -92,7 +88,7 @@
             "ram": "8 GB",
             "cpu": "400%",
             "storage": "40 GB SSD",
-            "price": 329,
+            "price": 799,
             "orderLink": "https://order.example.com/minecraft-granite",
             "backup": "4x",
             "ports": "4x",
@@ -105,7 +101,7 @@
             "ram": "16 GB",
             "cpu": "800%",
             "storage": "80 GB SSD",
-            "price": 629,
+            "price": 1599,
             "orderLink": "https://order.example.com/minecraft-diorite",
             "backup": "8x",
             "ports": "8x",
@@ -118,7 +114,7 @@
             "ram": "32 GB",
             "cpu": "1600%",
             "storage": "160 GB SSD",
-            "price": 1199,
+            "price": 3199,
             "orderLink": "https://order.example.com/minecraft-deepslate",
             "backup": "16x",
             "ports": "16x",
@@ -127,44 +123,69 @@
         ],
         "premium": [
           {
-            "id": "minecraft-premium-1",
-            "name": "Minecraft 4GB",
+            "id": "minecraft-gravel",
+            "name": "Gravel Plan",
+            "type": "premium",
+            "ram": "2 GB",
+            "cpu": "100%",
+            "storage": "20 GB SSD",
+            "price": 99,
+            "orderLink": "https://order.example.com/minecraft-gravel",
+            "backup": "1x",
+            "ports": "1x",
+            "databases": "1x"
+          },
+          {
+            "id": "minecraft-coal",
+            "name": "Coal Plan",
             "type": "premium",
             "ram": "4 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 475,
-            "orderLink": "https://order.example.com/minecraft-premium-4gb"
+            "cpu": "200%",
+            "storage": "20 GB SSD",
+            "price": 99,
+            "orderLink": "https://order.example.com/minecraft-coal",
+            "backup": "2x",
+            "ports": "2x",
+            "databases": "2x"
           },
           {
-            "id": "minecraft-premium-2",
-            "name": "Minecraft 8GB",
+            "id": "minecraft-copper",
+            "name": "Copper Plan",
             "type": "premium",
             "ram": "8 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 950,
-            "orderLink": "https://order.example.com/minecraft-premium-8gb"
+            "cpu": "400%",
+            "storage": "40 GB SSD",
+            "price": 399,
+            "orderLink": "https://order.example.com/minecraft-copper",
+            "backup": "4x",
+            "ports": "4x",
+            "databases": "4x"
           },
           {
-            "id": "minecraft-premium-3",
-            "name": "Minecraft 16GB",
+            "id": "minecraft-iron",
+            "name": "Iron Plan",
             "type": "premium",
             "ram": "16 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 1900,
-            "orderLink": "https://order.example.com/minecraft-premium-16gb"
+            "cpu": "800%",
+            "storage": "80 GB SSD",
+            "price": 799,
+            "orderLink": "https://order.example.com/minecraft-iron",
+            "backup": "8x",
+            "ports": "8x",
+            "databases": "8x"
           },
           {
-            "id": "minecraft-premium-4",
-            "name": "Minecraft 32GB",
+            "id": "minecraft-gold",
+            "name": "Gold Plan",
             "type": "premium",
             "ram": "32 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 3800,
-            "orderLink": "https://order.example.com/minecraft-premium-32gb"
+            "cpu": "1600%",
+            "storage": "160 GB SSD",
+            "price": 1600,
+            "orderLink": "https://order.example.com/minecraft-gold",
+            "backup": "16x",
+            "ports": "16x",
+            "databases": "16x"
           }
         ],
         "intel-xeon": [

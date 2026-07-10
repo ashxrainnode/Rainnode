@@ -14,21 +14,15 @@
       "hasDropdown": false
     },
     {
-      "name": "Dedicated",
-      "href": "/dedicated",
-      "icon": "Server",
-      "hasDropdown": false
-    },
-     {
       "name": "Discord Bot",
       "href": "/discord",
       "icon": "FaDiscord",
       "hasDropdown": false
     },
      {
-      "name": "WebHosting",
-      "href": "/webhosting",
-      "icon": "GrServerCluster",
+      "name": "Domain",
+      "href": "/domain",
+      "icon": "Globe",
       "hasDropdown": false
     },
     {
@@ -54,13 +48,13 @@
   "socialLinks": [
     {
       "name": "Discord",
-      "href": "#",
+      "href": "https://discord.gg/CqufPBrV2E",
       "icon": "discord"
     }
   ],
   "clientSpace": {
     "name": "CLIENT SPACE",
-    "href": "https://builtbybit.com/resources/all-in-one-hosting-template-dezernova.69325/",
+    "href": "https://console.rainnode.site/",
     "icon": "User"
   },
   "banner": {

@@ -262,5 +262,12 @@
       "title": "Präferenz-Cookies",
       "description": "Merken sich Ihre Sprach- und Theme-Präferenzen für eine bessere Benutzererfahrung."
     }
+  },
+  "domainPricing": {
+    "badge": "Domain Registration",
+    "title": "Register Your Domain",
+    "description": "Secure your brand with affordable domains, backed by Cloudflare DNS.",
+    "domain": "Domain Name",
+    "registerNow": "Register Now"
   }
 }

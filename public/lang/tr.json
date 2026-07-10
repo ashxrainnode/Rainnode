@@ -262,5 +262,12 @@
       "title": "Tercih Çerezleri",
       "description": "Daha iyi bir kullanıcı deneyimi için dil ve tema tercihlerinizi hatırlar."
     }
+  },
+  "domainPricing": {
+    "badge": "Domain Registration",
+    "title": "Register Your Domain",
+    "description": "Secure your brand with affordable domains, backed by Cloudflare DNS.",
+    "domain": "Domain Name",
+    "registerNow": "Register Now"
   }
 }

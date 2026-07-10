@@ -226,7 +226,7 @@
     "title": "Choose your Game Server",
     "description": "Select from our wide range of optimized game servers. Each server is configured for maximum performance and comes with DDoS protection.",
     "step1": "1. Plan Type",
-    "step2": "2. Location", 
+    "step2": "2. Location",
     "step3": "3. Select Software",
     "step4": "4. Choose Plan",
     "orderNow": "Order Now",
@@ -262,5 +262,12 @@
       "title": "Preference Cookies",
       "description": "Remember your language and theme preferences for a better user experience."
     }
+  },
+  "domainPricing": {
+    "badge": "Domain Registration",
+    "title": "Register Your Domain",
+    "description": "Secure your brand with affordable domains, backed by Cloudflare DNS.",
+    "domain": "Domain Name",
+    "registerNow": "Register Now"
   }
 }

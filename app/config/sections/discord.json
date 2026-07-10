@@ -28,7 +28,7 @@
         "bandwidth": "Unlimited",
         "bandwidthDetail": "Bandwidth",
         "uptime": "24/7 Uptime",
-        "price": "₹379",
+        "price": "₹15",
         "period": "/mo",
         "orderLink": "https://example.com/order/discord/budget/starter"
       },
@@ -44,7 +44,7 @@
         "bandwidth": "Unlimited",
         "bandwidthDetail": "Bandwidth",
         "uptime": "24/7 Uptime",
-        "price": "₹569",
+        "price": "₹30",
         "period": "/mo",
         "orderLink": "https://example.com/order/discord/budget/basic"
       },
@@ -60,7 +60,7 @@
         "bandwidth": "Unlimited",
         "bandwidthDetail": "Bandwidth",
         "uptime": "24/7 Uptime",
-        "price": "₹949",
+        "price": "₹60",
         "period": "/mo",
         "orderLink": "https://example.com/order/discord/budget/standard"
       }

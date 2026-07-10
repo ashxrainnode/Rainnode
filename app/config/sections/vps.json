@@ -1,6 +1,12 @@
 {
   "planTypes": [
     {
+      "id": "intel-xeon",
+      "name": "Intel Xeon",
+      "displayName": "Intel Xeon",
+      "image": "/cpu/intel.png"
+    },
+    {
       "id": "ryzen-7",
       "name": "AMD Ryzen 7",
       "displayName": "AMD Ryzen 7",
@@ -11,12 +17,6 @@
       "name": "AMD Ryzen 9",
       "displayName": "AMD Ryzen 9",
       "image": "/cpu/ryzen9.png"
-    },
-    {
-      "id": "intel-xeon",
-      "name": "Intel Xeon",
-      "displayName": "Intel Xeon",
-      "image": "/cpu/intel.png"
     }
   ],
   "locations": [
