@@ -274,7 +274,7 @@ export default function GameServerList() {
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">{t('gameServerList.step4')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-          {(currentGame?.plans[selectedPlanType] || []).map((plan: GamePlan, index: number) => (
+          {(currentGame?.plans[`${selectedLocation}-${selectedPlanType}`] || currentGame?.plans[selectedPlanType] || []).map((plan: GamePlan, index: number) => (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}

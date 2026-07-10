@@ -9,11 +9,6 @@
       "id": "premium",
       "name": "AMD Epyc",
       "image": "/cpu/ryzen7.png"
-    },
-    {
-      "id": "intel-xeon",
-      "name": "Ryzen 9",
-      "image": "/cpu/ryzen9.png"
     }
   ],
   "locations": [
@@ -22,7 +17,8 @@
       "name": "India",
       "flag": "/flags/india.png",
       "availablePlanTypes": [
-        "premium"
+        "premium",
+        "budget"
       ]
     },
     {
@@ -31,7 +27,7 @@
       "flag": "/flags/singapore.png",
       "availablePlanTypes": [
         "premium",
-        "intel-xeon"
+        "budget"
       ]
     },
     {
@@ -188,46 +184,205 @@
             "databases": "16x"
           }
         ],
-        "intel-xeon": [
+        "singapore-budget": [
           {
-            "id": "minecraft-xeon-1",
-            "name": "Minecraft 4GB",
-            "type": "intel-xeon",
+            "id": "minecraft-sg-dirt",
+            "name": "Dirt Plan",
+            "type": "budget",
+            "ram": "2 GB",
+            "cpu": "100%",
+            "storage": "20 GB SSD",
+            "price": 349,
+            "orderLink": "https://order.example.com/minecraft-sg-dirt",
+            "backup": "1x",
+            "ports": "1x",
+            "databases": "1x"
+          },
+          {
+            "id": "minecraft-sg-stone",
+            "name": "Stone Plan",
+            "type": "budget",
             "ram": "4 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 570,
-            "orderLink": "https://order.example.com/minecraft-xeon-4gb"
+            "cpu": "200%",
+            "storage": "20 GB SSD",
+            "price": 699,
+            "orderLink": "https://order.example.com/minecraft-sg-stone",
+            "backup": "2x",
+            "ports": "2x",
+            "databases": "2x"
           },
           {
-            "id": "minecraft-xeon-2",
-            "name": "Minecraft 8GB",
-            "type": "intel-xeon",
+            "id": "minecraft-sg-granite",
+            "name": "Granite Plan",
+            "type": "budget",
             "ram": "8 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 1140,
-            "orderLink": "https://order.example.com/minecraft-xeon-8gb"
+            "cpu": "400%",
+            "storage": "40 GB SSD",
+            "price": 1399,
+            "orderLink": "https://order.example.com/minecraft-sg-granite",
+            "backup": "4x",
+            "ports": "4x",
+            "databases": "4x"
           },
           {
-            "id": "minecraft-xeon-3",
-            "name": "Minecraft 16GB",
-            "type": "intel-xeon",
+            "id": "minecraft-sg-diorite",
+            "name": "Diorite Plan",
+            "type": "budget",
             "ram": "16 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 2280,
-            "orderLink": "https://order.example.com/minecraft-xeon-16gb"
+            "cpu": "800%",
+            "storage": "80 GB SSD",
+            "price": 2799,
+            "orderLink": "https://order.example.com/minecraft-sg-diorite",
+            "backup": "8x",
+            "ports": "8x",
+            "databases": "8x"
           },
           {
-            "id": "minecraft-xeon-4",
-            "name": "Minecraft 32GB",
-            "type": "intel-xeon",
+            "id": "minecraft-sg-deepslate",
+            "name": "Deepslate Plan",
+            "type": "budget",
             "ram": "32 GB",
-            "cpu": "Unmetered",
-            "storage": "Unmetered SSD",
-            "price": 4560,
-            "orderLink": "https://order.example.com/minecraft-xeon-32gb"
+            "cpu": "1600%",
+            "storage": "160 GB SSD",
+            "price": 5599,
+            "orderLink": "https://order.example.com/minecraft-sg-deepslate",
+            "backup": "16x",
+            "ports": "16x",
+            "databases": "16x"
+          }
+        ],
+        "singapore-premium": [
+          {
+            "id": "minecraft-sg-amd-dirt",
+            "name": "Dirt Plan",
+            "type": "premium",
+            "ram": "2 GB",
+            "cpu": "100%",
+            "storage": "20 GB SSD",
+            "price": 539,
+            "orderLink": "https://order.example.com/minecraft-sg-amd-dirt",
+            "backup": "1x",
+            "ports": "1x",
+            "databases": "1x"
+          },
+          {
+            "id": "minecraft-sg-amd-stone",
+            "name": "Stone Plan",
+            "type": "premium",
+            "ram": "4 GB",
+            "cpu": "200%",
+            "storage": "20 GB SSD",
+            "price": 2199,
+            "orderLink": "https://order.example.com/minecraft-sg-amd-stone",
+            "backup": "2x",
+            "ports": "2x",
+            "databases": "2x"
+          },
+          {
+            "id": "minecraft-sg-amd-granite",
+            "name": "Granite Plan",
+            "type": "premium",
+            "ram": "8 GB",
+            "cpu": "400%",
+            "storage": "40 GB SSD",
+            "price": 4399,
+            "orderLink": "https://order.example.com/minecraft-sg-amd-granite",
+            "backup": "4x",
+            "ports": "4x",
+            "databases": "4x"
+          },
+          {
+            "id": "minecraft-sg-amd-diorite",
+            "name": "Diorite Plan",
+            "type": "premium",
+            "ram": "16 GB",
+            "cpu": "800%",
+            "storage": "80 GB SSD",
+            "price": 8799,
+            "orderLink": "https://order.example.com/minecraft-sg-amd-diorite",
+            "backup": "8x",
+            "ports": "8x",
+            "databases": "8x"
+          },
+          {
+            "id": "minecraft-sg-amd-deepslate",
+            "name": "Deepslate Plan",
+            "type": "premium",
+            "ram": "32 GB",
+            "cpu": "1600%",
+            "storage": "160 GB SSD",
+            "price": 17699,
+            "orderLink": "https://order.example.com/minecraft-sg-amd-deepslate",
+            "backup": "16x",
+            "ports": "16x",
+            "databases": "16x"
+          }
+        ],
+        "india-budget": [
+          {
+            "id": "minecraft-in-dirt",
+            "name": "Dirt Plan",
+            "type": "budget",
+            "ram": "2 GB",
+            "cpu": "100%",
+            "storage": "20 GB SSD",
+            "price": 89,
+            "orderLink": "https://order.example.com/minecraft-in-dirt",
+            "backup": "1x",
+            "ports": "1x",
+            "databases": "1x"
+          },
+          {
+            "id": "minecraft-in-stone",
+            "name": "Stone Plan",
+            "type": "budget",
+            "ram": "4 GB",
+            "cpu": "200%",
+            "storage": "20 GB SSD",
+            "price": 169,
+            "orderLink": "https://order.example.com/minecraft-in-stone",
+            "backup": "2x",
+            "ports": "2x",
+            "databases": "2x"
+          },
+          {
+            "id": "minecraft-in-granite",
+            "name": "Granite Plan",
+            "type": "budget",
+            "ram": "8 GB",
+            "cpu": "400%",
+            "storage": "40 GB SSD",
+            "price": 329,
+            "orderLink": "https://order.example.com/minecraft-in-granite",
+            "backup": "4x",
+            "ports": "4x",
+            "databases": "4x"
+          },
+          {
+            "id": "minecraft-in-diorite",
+            "name": "Diorite Plan",
+            "type": "budget",
+            "ram": "16 GB",
+            "cpu": "800%",
+            "storage": "80 GB SSD",
+            "price": 629,
+            "orderLink": "https://order.example.com/minecraft-in-diorite",
+            "backup": "8x",
+            "ports": "8x",
+            "databases": "8x"
+          },
+          {
+            "id": "minecraft-in-deepslate",
+            "name": "Deepslate Plan",
+            "type": "budget",
+            "ram": "32 GB",
+            "cpu": "1600%",
+            "storage": "160 GB SSD",
+            "price": 1199,
+            "orderLink": "https://order.example.com/minecraft-in-deepslate",
+            "backup": "16x",
+            "ports": "16x",
+            "databases": "16x"
           }
         ]
       }
